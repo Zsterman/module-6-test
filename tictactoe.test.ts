@@ -23,6 +23,10 @@ test('click to upper left square adds X to square', async () => {
 
     let button = await (await driver).findElement(By.id('cell-0'));
     await button.click();
+
+
+    expect(await button.getText()).toContain('X')
+    await driver.sleep(2000);    
     
 });
 
@@ -30,6 +34,9 @@ test('click to upper right square adds X to square', async () => {
 
     let button = await (await driver).findElement(By.id('cell-2'));
     await button.click();
+
+    expect(await button.getText()).toContain('X')
+    await driver.sleep(2000);
     
 });
 
@@ -39,6 +46,9 @@ test('click to bottom right square adds X to square', async () => {
     let button = await (await driver).findElement(By.id('cell-8'));
     await button.click();
     
+
+    expect(await button.getText()).toContain('X')
+    await driver.sleep(2000);
 });
 
 
